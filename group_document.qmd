@@ -1,0 +1,24 @@
+---
+title: "Group document"
+format: html
+---
+
+## Kacper
+
+. . .
+
+## Aleksandra
+
+. . .
+
+## Dagmar
+
+. . .
+
+## Sofi
+
+. . .
+
+## Gabo
+
+. . .
