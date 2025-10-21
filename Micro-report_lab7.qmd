@@ -22,5 +22,5 @@ library(tidyverse)
 ## Load data
 
 ```{r}
-load("")
+load("data/gravier.RData")
 ```
