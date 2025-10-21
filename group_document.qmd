@@ -11,6 +11,12 @@ Kacper's text :-)
 
 Aleksandra's text . . .
 
+new branch
+
+```{r}
+library(tidyverse)
+```
+
 ## Dagmar
 
 Dagmar's text!!
