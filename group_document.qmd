@@ -8,22 +8,31 @@ format: html
 Kacper's text :-)
 
 ## Aleksandra
-Aleksandra's text
-. . .
+
+Aleksandra's text . . .
 
 ## Dagmar
 
 Dagmar's text!!
+
+### New feature
+
+een beetje tekst
+
+```{r}
+#en wat code
+```
 
 ## Sofi
 
 . . .
 
 ## Gabo
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 ```{r}
 print("Hello World")
 ```
-
 
 . . .
