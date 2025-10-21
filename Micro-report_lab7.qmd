@@ -3,3 +3,14 @@ title: "Micro-report_lab7"
 format: html
 ---
 
+## Load libraries
+
+```{r}
+
+```
+
+## Load data
+
+```{r}
+
+```
