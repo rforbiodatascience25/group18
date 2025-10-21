@@ -1,19 +1,26 @@
 ---
 title: "Micro-report_lab7"
-format: html
+title: "Lab 7 Assignment: Group 18"
+author: 
+  - "Kacper Maciejewski (s243548)"
+  - "Sofia Russo (252054)"
+  - "Aleksandra Wozniak (253713)"
+  - "Gabriel Loayza (252608)"
+  - "Dagmar Geevers (252256)"
+format:
+  html:
+    embed-resources: true
+editor:visual
 ---
 
 ## Load libraries
 
 ```{r}
 library(tidyverse)
-
 ```
 
 ## Load data
 
 ```{r}
-
+load("")
 ```
-
-## Tidy
