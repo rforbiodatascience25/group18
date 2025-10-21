@@ -21,6 +21,14 @@ library(tidyverse)
 
 Dagmar's text!!
 
+### New feature
+
+een beetje tekst
+
+```{r}
+#en wat code
+```
+
 ## Sofi
 
 . . .
