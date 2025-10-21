@@ -8,8 +8,14 @@ format: html
 Kacper's text :-)
 
 ## Aleksandra
-Aleksandra's text
-. . .
+
+Aleksandra's text . . .
+
+new branch
+
+```{r}
+library(tidyverse)
+```
 
 ## Dagmar
 
@@ -20,10 +26,11 @@ Dagmar's text!!
 . . .
 
 ## Gabo
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 ```{r}
 print("Hello World")
 ```
-
 
 . . .
