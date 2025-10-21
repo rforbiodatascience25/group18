@@ -11,9 +11,23 @@ Kacper's text :-)
 
 Aleksandra's text . . .
 
+new branch
+
+```{r}
+library(tidyverse)
+```
+
 ## Dagmar
 
 Dagmar's text!!
+
+### New feature
+
+een beetje tekst
+
+```{r}
+#en wat code
+```
 
 ## Sofi
 
@@ -32,3 +46,4 @@ print("Hello World")
 ```{r}
 print("Hello World 2")
 ```
+. . .
