@@ -77,9 +77,29 @@ ggplot(top, aes(PC1 * 20, PC2 * 20)) +
   geom_text(aes(label = column), hjust = 1, size = 3, color = "#904C2F") +
   coord_fixed() +
   theme_minimal() +
-  ggtitle("Top 10 genes contributing to PC1 and PC2")
+  ggtitle("Top 20 genes contributing to PC1 and PC2")
 ```
 
 In the figure, each arrow is a gene and points in the direction where it explains variation the most across first and second PCs. In theory, longer arrows have stronger influence on how samples separate in the PCA space. Because the loading values are very small and similar in magnitude, all arrows appear nearly the same length, meaning the top genes contribute at comparable levels to these components. In practice, as we have almost 3k genes, variation cannot be sufficently captured by just two components. In the next section, we will examine how many PCs we need.
 
 ## Look at the variance explained by each PC
+
+```{r}
+#extracting values that indicate the strength of the each component
+variance_data <-tidy(pca_fit, matrix = "eigenvalues")
+
+# each PC is treated like a category
+ggplot(data = variance_data, aes(as.factor(PC), y = percent)) + 
+  geom_col(fill = "blue") +
+  labs ( 
+    title = "Percent of variance explained by each PC" ,
+    x = "PC" ,
+    y = "Percent of explained variance"
+    ) +
+  theme_minimal() 
+
+
+
+```
+
+This graph shows the percentage of total variation in the data, which is explained by each PC created in PCA. Higher value of each PC means, that this component has a bigger proportion of the differences in the data
