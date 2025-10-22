@@ -99,6 +99,7 @@ ggplot(data = variance_data, aes(as.factor(PC), y = percent)) +
   theme_minimal() 
 
 
+
 ```
 
 This graph shows the percentage of total variation in the data, which is explained by each PC created in PCA. Higher value of each PC means, that this component has a bigger proportion of the differences in the data
