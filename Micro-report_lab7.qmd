@@ -9,7 +9,7 @@ author:
 format:
   html:
     embed-resources: true
-editor: visual
+editor: visual
 ---
 
 ## Load libraries
