@@ -86,20 +86,48 @@ In the figure, each arrow is a gene and points in the direction where it explain
 
 ```{r}
 #extracting values that indicate the strength of the each component
-variance_data <-tidy(pca_fit, matrix = "eigenvalues")
+variance_data <- tidy(pca_fit, matrix = "eigenvalues") %>%
+  mutate(PC = as.numeric(gsub("PC", "", PC)))  # Convert PC names to numeric
 
-# each PC is treated like a category
-ggplot(data = variance_data, aes(as.factor(PC), y = percent)) + 
+# each pC is treated as numeric
+ggplot(data = variance_data, aes(x = PC, y = percent)) + 
   geom_col(fill = "blue") +
-  labs ( 
-    title = "Percent of variance explained by each PC" ,
-    x = "PC" ,
+  labs(
+    title = "Percent of variance explained by each PC",
+    x = "Principal Component",
     y = "Percent of explained variance"
-    ) +
-  theme_minimal() 
+  ) +
+  scale_x_continuous(breaks = seq(0, max(variance_data$PC), by = 5)) +
+  theme_minimal()
 
 
 
 ```
 
+## Look at the cumulative variance
+
 This graph shows the percentage of total variation in the data, which is explained by each PC created in PCA. Higher value of each PC means, that this component has a bigger proportion of the differences in the data
+
+```{r}
+# extract variance explained by each component
+variance_data <- tidy(pca_fit, matrix = "eigenvalues")
+
+# add cumulative variance column
+variance_data <- variance_data %>%
+  mutate(cumulative = cumsum(percent))
+
+# plot cum var
+ggplot(variance_data, aes(x = PC, y = cumulative)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  scale_x_continuous(breaks = seq(0, max(variance_data$PC), by = 5)) +
+  labs(
+    title = "Cumulative variance explained by principal components",
+    x = "PC",
+    y = "cumulative percent of explained variance"
+  ) +
+  theme_minimal()
+
+```
+
+As presented, in the gene expression space, we can explain virtually whole variance using 150 PCs. This is a great dimensional reduction, given that our matrix had almost 3k genes.
